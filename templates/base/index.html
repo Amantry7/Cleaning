@@ -1,0 +1,478 @@
+{% load static %}
+<!doctype html>
+<html lang="en">
+    <head>
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+
+        <meta name="description" content="">
+        <meta name="author" content="">
+
+        <title>Osh cleaning</title>
+
+        <!-- CSS FILES -->        
+        <link rel="preconnect" href="https://fonts.googleapis.com">
+        
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        
+        <link href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,400;0,500;0,700;1,400&display=swap" rel="stylesheet">
+
+        <link href="{% static 'css/bootstrap.min.css' %}" rel="stylesheet">
+
+        <link href="{% static 'css/bootstrap-icons.css' %}" rel="stylesheet">
+
+        <link href="{% static 'css/tooplate-clean-work.css' %}" rel="stylesheet">
+
+<!--
+
+Tooplate 2132 Clean Work
+
+https://www.tooplate.com/view/2132-clean-work
+
+Free Bootstrap 5 HTML Template
+
+-->
+    </head>
+    
+    <body>
+
+        <header class="site-header">
+            <div class="container">
+                <div class="row">
+                    
+                    <div class="col-lg-12 col-12 d-flex flex-wrap">
+                        <p class="d-flex me-4 mb-0">
+                            <i class="bi-house-fill me-2"></i>
+                            Универсальная служба уборки
+                        </p>
+
+                        <p class="d-flex d-lg-block d-md-block d-none me-4 mb-0">
+                            <i class="bi-clock-fill me-2"></i>
+                            <strong class="me-2">Mon - Fri</strong> 8:00  - 18:30 
+                        </p>
+
+                        <p class="site-header-icon-wrap text-white d-flex mb-0 ms-auto">
+                            <i class="site-header-icon bi-whatsapp me-2"></i>
+
+                            <a href="tel: {{settings.number}}" class="text-white">
+                                {{settings.number}}
+                            </a>
+                        </p>
+                    </div>
+
+                </div>
+            </div>
+        </header>
+
+        <nav class="navbar navbar-expand-lg">
+            <div class="container">
+                <a class="navbar-brand" href="index.html">
+                    <img src="{{settings.logo.url}}" class="logo img-fluid" alt="">
+
+                    <span class="ms-2">{{settings.title}}</span>
+                </a>
+
+                <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+                    <span class="navbar-toggler-icon"></span>
+                </button>
+
+                <div class="collapse navbar-collapse" id="navbarNav">
+                    <ul class="navbar-nav ms-auto">
+                        <li class="nav-item">
+                            <a class="nav-link active" href="{%url "index"%}">Home</a>
+                        </li>
+
+                        <li class="nav-item">
+                            <a class="nav-link" href="{% url 'about' %}">About Us</a>
+                        </li>
+
+                        <li class="nav-item dropdown">
+                            <a class="nav-link" href="{%url "servise" %}">Services</a>
+{% comment %} 
+                            <ul class="dropdown-menu dropdown-menu-light" aria-labelledby="navbarLightDropdownMenuLink">
+                                <li><a class="dropdown-item" href="services.html">Our Services</a></li> {% endcomment %}
+
+                                {% comment %} <li><a class="dropdown-item" href="coming-soon.html">Coming Soon</a></li> {% endcomment %}
+
+                                {% comment %} <li><a class="dropdown-item" href="page-404.html">Page 404</a></li> {% endcomment %}
+                            </ul>
+                        </li>
+
+                        <li class="nav-item">
+                            <a class="nav-link" href="{%url "contact" %}">Contact</a>
+                        </li>
+
+                        <li class="nav-item ms-3">
+                            <a class="nav-link custom-btn custom-border-btn custom-btn-bg-white btn" href="{%url 'contact'%}">Начать</a>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </nav>
+
+        <main>
+
+            <section class="hero-section hero-section-full-height d-flex justify-content-center align-items-center">
+                <div class="section-overlay"></div>
+
+                <div class="container">
+                    <div class="row">
+
+                        <div class="col-lg-7 col-12 text-center mx-auto">
+                            <h1 class="cd-headline rotate-1 text-white mb-4 pb-2">
+                                <span>Мы очищаем ваш </span>
+                                <span class="cd-words-wrapper">
+                                    <b class="is-visible">Дом</b>
+                                    <b>Офис</b>
+                                    <b>Кухню</b>
+                                </span>
+                            </h1>
+
+                            <a class="custom-btn btn button button--atlas smoothscroll me-3" href="#intro-section">
+                                <span>Введение </span>
+
+                                <div class="marquee" aria-hidden="true">
+                                    <div class="marquee__inner">
+                                        <span>Introduction</span>
+                                        <span>Introduction</span>
+                                        <span>Introduction</span>
+                                        <span>Introduction</span>
+                                    </div>
+                                </div>
+                            </a>
+
+                            <a class="custom-btn custom-border-btn custom-btn-bg-white btn button button--pan smoothscroll" href="#services-section">
+                                <span>Изучите услуги</span>
+                            </a>
+                        </div>
+
+                    </div>
+                </div>
+
+                <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1440 320"><path fill="#ffffff" fill-opacity="1" d="M0,224L40,229.3C80,235,160,245,240,250.7C320,256,400,256,480,240C560,224,640,192,720,176C800,160,880,160,960,138.7C1040,117,1120,75,1200,80C1280,85,1360,139,1400,165.3L1440,192L1440,320L1400,320C1360,320,1280,320,1200,320C1120,320,1040,320,960,320C880,320,800,320,720,320C640,320,560,320,480,320C400,320,320,320,240,320C160,320,80,320,40,320L0,320Z"></path></svg>
+            </section>
+
+
+            <section class="intro-section" id="intro-section">
+                <div class="container">
+                    <div class="row justify-content-lg-center align-items-center">
+
+                        <div class="col-lg-6 col-12">
+                            <h2 class="mb-4">Надежная и быстрая очистка <br> </h2>
+
+                            <p><a href="https://ru.wikipedia.org/wiki/%D0%A7%D0%B8%D1%81%D1%82%D0%BE%D1%82%D0%B0">Clean Work</a>{{settings.disc}} <a rel="nofollow" href="https://www.freepik.com/" target="_blank"></a> and <a rel="nofollow" href="https://worldvectorlogo.com/" target="_blank"></a></p>
+                            <p><strong></strong> <a href="https://www.tooplate.com/contact" target="_blank"></a> </p>
+                        </div>
+
+                        <div class="col-lg-6 col-12 custom-block-wrap">
+                            <img src="{% static 'images/male-wearing-apron-female-white-t-shirt-smiling-broadly-being-glad-clean.png' %}" class="img-fluid">
+
+                            <div class="custom-block d-flex flex-column">
+                                <h6 class="text-white mb-3">Нужна помощь? <br> Позваните нам:</h6>
+
+                                <p class="d-flex mb-0">
+                                    <i class="bi-telephone-fill custom-icon me-2"></i>
+
+                                    <a href="tel: {{settings.number}}">
+                                        {{settings.number}}
+                                    </a>
+                                </p>
+                            </div>
+                        </div>
+
+                    </div>
+                </div>
+            </section>
+
+
+            <section class="services-section section-padding section-bg" id="services-section">                
+                <div class="container">
+                    <div class="row">
+
+                        <div class="col-lg-12 col-12">
+                            <h2 class="mb-4">Наши лучшие предложение </h2>
+                        </div>
+                        {% for subject in subject%}
+                        <div class="col-lg-6 col-12">
+                            <div class="services-thumb">
+                                <div class="row">
+                                    <div class="col-lg-5 col-md-5 col-12">
+                                        <div class="services-image-wrap">
+                                            <a href="services-detail.html">
+                                                <img src="{{subject.image.url}}" class="services-image img-fluid" alt="">
+                                                <img src="{{subject.image2.url}}" class="services-image services-image-hover img-fluid" alt="">
+
+                                                <div class="services-icon-wrap">
+                                                    <div class="d-flex justify-content-between align-items-center">
+                                                        <p class="text-white mb-0">
+                                                            <i class="bi-cash me-2"></i>
+                                                            ${{subject.price}}
+                                                        </p>
+
+                                                        <p class="text-white mb-0">
+                                                            <i class="bi-clock-fill me-2"></i>
+                                                            {{subject.time}} hrs
+                                                        </p>
+                                                    </div>                                                    
+                                                </div>
+                                            </a>
+                                        </div>
+                                    </div>
+
+                                    <div class="col-lg-7 col-md-7 col-12 d-flex align-items-center">
+                                        <div class="services-info mt-4 mt-lg-0 mt-md-0">
+                                            <h4 class="services-title mb-1 mb-lg-2">
+                                                <a class="services-title-link" href="services-detail.html">{{subject.title}}</a>
+                                            </h4>
+
+                                            <p>{{subject.disk}}</p>
+
+                                            <div class="d-flex flex-wrap align-items-center">
+                                                {% comment %} <div class="reviews-icons">
+                                                    <i class="bi-star-fill"></i>
+                                                    <i class="bi-star-fill"></i>
+                                                    <i class="bi-star-fill"></i>
+                                                    <i class="bi-star"></i>
+                                                    <i class="bi-star"></i>
+                                                </div> {% endcomment %}
+
+                                                <a href="services-detail.html" class="custom-btn btn button button--atlas mt-2 ms-auto">
+                                                    <span>Learn More</span>
+
+                                                    <div class="marquee" aria-hidden="true">
+                                                        <div class="marquee__inner">
+                                                            <span>Learn More</span>
+                                                            <span>Learn More</span>
+                                                            <span>Learn More</span>
+                                                            <span>Learn More</span>
+                                                        </div>
+                                                    </div>
+                                                </a>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    {% endfor %}
+
+                                </div>
+                            </div>
+                        </div>
+
+
+
+                    </div>
+                </div>
+            </section>
+
+
+            <section class="testimonial-section section-padding section-bg">
+                <div class="section-overlay"></div>
+
+                <div class="container">
+                    <div class="row">
+
+                        <div class="col-lg-12 col-12 text-center">
+                            <h2 class="text-white mb-4">Счастливые клиенты</h2>
+                        </div>
+
+                        <div class="col-lg-4 col-12">
+                            {% for client in client %}
+                            <div class="featured-block">
+                                <div class="d-flex align-items-center mb-3">
+                                    <img src="{{client.image.url}}" class="avatar-image img-fluid">
+
+                                    <div class="ms-3">
+                                        <h4 class="mb-0">{{client.name}}</h4>
+
+                                        <div class="reviews-icons mb-1">
+                                            <i class="bi-star-fill"></i>
+                                            <i class="bi-star-fill"></i>
+                                            <i class="bi-star-fill"></i>
+                                            <i class="bi-star-fill"></i>
+                                            <i class="bi-star-fill"></i> 
+                                        </div>
+                                    </div>
+                                </div>
+
+                                <p class="mb-0">{{client.disc}}</p>
+                            </div>
+                            {% endfor %}
+                    </div>
+                </div>
+            </section>
+
+
+            <section class="partners-section">
+                <div class="container">
+                    <div class="row justify-content-center align-items-center">
+
+                        <div class="col-lg-12 col-12">
+                            <h4 class="partners-section-title bg-white shadow-lg">Нам доверяют компании</h4>
+                        </div>
+                        {% for partners in partners%}
+                        <div class="col-lg-2 col-md-4 col-6">
+                            <img src="{{partners.image.url}}" class="partners-image img-fluid">
+                        </div>
+
+                        {% endfor %}
+                    </div>
+                </div>
+            </section>
+        </main>
+
+
+        <footer class="site-footer">
+            <div class="container">
+                <div class="row">
+
+                    <div class="col-lg-12 col-12 d-flex align-items-center mb-4 pb-2">
+                        <div>
+                            <img src="{% static 'images/bubbles.png' %}" class="logo img-fluid" alt="">
+                        </div>
+
+                        <ul class="footer-menu d-flex flex-wrap ms-5">
+                            <li class="footer-menu-item"><a href="#" class="footer-menu-link">About Us</a></li>
+
+                            <li class="footer-menu-item"><a href="#" class="footer-menu-link">Blog</a></li>
+
+                            <li class="footer-menu-item"><a href="#" class="footer-menu-link">Reviews</a></li>
+
+                            <li class="footer-menu-item"><a href="#" class="footer-menu-link">Contact</a></li>
+                        </ul>
+                    </div>
+
+                    <div class="col-lg-5 col-12 mb-4 mb-lg-0">
+                        <h5 class="site-footer-title mb-3">Наши услуги</h5>
+
+                        <ul class="footer-menu">
+                            <li class="footer-menu-item">
+                                <a href="#" class="footer-menu-link">
+                                    <i class="bi-chevron-double-right footer-menu-link-icon me-2"></i>
+                                    Уборка дома
+                                </a>
+                            </li>
+
+                            <li class="footer-menu-item">
+                                <a href="#" class="footer-menu-link">
+                                    <i class="bi-chevron-double-right footer-menu-link-icon me-2"></i>
+                                    Мойка машин
+                                </a>
+                            </li>
+
+                            <li class="footer-menu-item">
+                                <a href="#" class="footer-menu-link">
+                                    <i class="bi-chevron-double-right footer-menu-link-icon me-2"></i>
+                                    Прачечная
+                                </a>
+                            </li>
+
+                            <li class="footer-menu-item">
+                                <a href="#" class="footer-menu-link">
+                                    <i class="bi-chevron-double-right footer-menu-link-icon me-2"></i>
+                                    Уборка офисов
+                                </a>
+                            </li>
+
+                            <li class="footer-menu-item">
+                                <a href="#" class="footer-menu-link">
+                                    <i class="bi-chevron-double-right footer-menu-link-icon me-2"></i>
+                                    Toilet Cleaning
+                                </a>
+                            </li>
+                        </ul>
+                    </div>
+
+                    <div class="col-lg-4 col-md-6 col-12 mb-4 mb-lg-0 mb-md-0">
+                        <h5 class="site-footer-title mb-3">Office</h5>
+
+                        <p class="text-white d-flex mt-3 mb-2">
+                            <i class="bi-geo-alt-fill me-2"></i>
+                            {{settings.addres}}
+                        </p>
+
+                        <p class="text-white d-flex mb-2">
+                            <i class="bi-telephone-fill me-2"></i>
+
+                            <a href="tel: 110-220-9800" class="site-footer-link">
+                                {{settings.number}}
+                            </a>
+                        </p>
+
+                        <p class="text-white d-flex">
+                            <i class="bi-envelope-fill me-2"></i>
+
+                            <a href="{{settings.gmail}}" class="site-footer-link">
+                                {{settings.gmail}}
+                            </a>
+                        </p>
+
+                        <ul class="social-icon mt-4">
+                            <li class="social-icon-item">
+                                <a href="{{settings.twitter}}" class="social-icon-link button button--skoll">
+                                    <span></span>
+                                    <span class="bi-twitter"></span>
+                                </a>
+                            </li>
+
+                            <li class="social-icon-item">
+                                <a href="{{settings.facebook}}" class="social-icon-link button button--skoll">
+                                    <span></span>
+                                    <span class="bi-facebook"></span>
+                                </a>
+                            </li>
+
+                            <li class="social-icon-item">
+                                <a href="{{settings.instagram}}" class="social-icon-link button button--skoll">
+                                    <span></span>
+                                    <span class="bi-instagram"></span>
+                                </a>
+                            </li>
+                        </ul>
+                    </div>
+
+                    <div class="col-lg-3 col-md-6 col-6 mt-3 mt-lg-0 mt-md-0">
+                        <div class="featured-block">
+                            <h5 class="text-white mb-3">Времы работы</h5>
+
+                            <strong class="d-block text-white mb-1">Mon - Fri</strong>
+
+                            <p class="text-white mb-3">8:00 - 18:30 </p>
+
+                            <strong class="d-block text-white mb-1">Sat</strong>
+
+                            <p class="text-white mb-0">6:00 AM - 16:30 </p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="site-footer-bottom">
+                <div class="container">
+                    <div class="row">
+
+                        <div class="col-lg-6 col-12">
+                            <p class="copyright-text mb-0">Copyright © 2036 Clean Work Co., Ltd.</p>
+                        </div>
+                        
+                        <div class="col-lg-6 col-12 text-end">
+                            <p class="copyright-text mb-0">
+                            // Designed by <a href="https://www.tooplate.com" target="_parent">Tooplate</a> //</p>
+                        </div>
+                        
+                    </div>
+                </div>
+            </div>
+        </footer>
+
+        <!-- JAVASCRIPT FILES -->
+        <script src="{% static 'js/jquery.min.js' %}"></script>
+        <script src="{% static 'js/bootstrap.min.js' %}"></script>
+        <script src="{% static 'js/jquery.backstretch.min.js' %}"></script>
+        <script src="{% static 'js/counter.js' %}"></script>
+        <script src="{% static 'js/countdown.js' %}"></script>
+        <script src="{% static 'js/init.js' %}"></script>
+        <script src="{% static 'js/modernizr.js' %}"></script>
+        <script src="{% static 'js/animated-headline.js' %}"></script>
+        <script src="{% static 'js/custom.js' %}"></script>
+
+    </body>
+</html>
